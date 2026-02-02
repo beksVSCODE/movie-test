@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMovies, useSearchMovies, useSearchStore } from '../../entities/movie';
 import { SearchBar } from '../../features/search-movies';
+import { MovieFilters } from '../../features/movie-filters';
 import { MoviesGrid } from '../../widgets/movies-grid';
 import { Loading, ErrorMessage, Pagination } from '../../shared/ui';
 import { useDebounce } from '../../shared/lib';
@@ -14,14 +15,14 @@ import {
 
 export const MoviesListPage = () => {
     const navigate = useNavigate();
-    const { searchQuery, currentPage, setCurrentPage } = useSearchStore();
+    const { searchQuery, currentPage, filters, setCurrentPage } = useSearchStore();
     const debouncedSearchQuery = useDebounce(searchQuery, 500);
 
     // Используем поиск если есть запрос (минимум 3 символа), иначе популярные фильмы
     const isSearchMode = debouncedSearchQuery.length >= 3;
 
-    const popularMovies = useMovies(currentPage);
-    const searchResults = useSearchMovies(debouncedSearchQuery, currentPage);
+    const popularMovies = useMovies(currentPage, filters);
+    const searchResults = useSearchMovies(debouncedSearchQuery, currentPage, filters);
 
     // Выбираем активный запрос
     const { data, isLoading, error } = isSearchMode ? searchResults : popularMovies;
@@ -49,6 +50,7 @@ export const MoviesListPage = () => {
             <PageContainer>
                 <PageTitle>🎬 {isSearchMode ? 'Результаты поиска' : 'Популярные фильмы'}</PageTitle>
                 <SearchBar />
+                <MovieFilters />
                 {data?.total_results && (
                     <MoviesCount>
                         Найдено фильмов: {data.total_results.toLocaleString('ru-RU')}

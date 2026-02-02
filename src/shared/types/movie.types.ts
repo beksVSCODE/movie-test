@@ -71,3 +71,15 @@ export interface MovieQueryParams {
     sort_by?: string;
     query?: string;
 }
+
+// Фильтры для фильмов
+export interface MovieFilters {
+    genreId?: number | null;
+    year?: number | null;
+    minRating?: number | null;
+}
+
+// Ответ API со списком жанров
+export interface GenresResponse {
+    genres: Genre[];
+}

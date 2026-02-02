@@ -6,5 +6,7 @@ export type {
     ProductionCountry,
     SpokenLanguage,
     MoviesResponse,
-    MovieQueryParams
+    MovieQueryParams,
+    MovieFilters,
+    GenresResponse
 } from './movie.types';

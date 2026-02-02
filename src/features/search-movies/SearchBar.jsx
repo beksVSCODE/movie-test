@@ -23,7 +23,7 @@ export const SearchBar = () => {
     return (
         <SearchWrapper>
             <SearchContainer>
-                <SearchIcon>🔍</SearchIcon>
+                <SearchIcon></SearchIcon>
                 <SearchInput
                     type="text"
                     placeholder="Поиск фильмов..."
