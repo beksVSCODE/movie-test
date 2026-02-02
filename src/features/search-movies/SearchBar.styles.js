@@ -9,15 +9,6 @@ const float = keyframes`
   }
 `;
 
-const shimmer = keyframes`
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-`;
-
 export const SearchWrapper = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.xl};
 `;
