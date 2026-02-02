@@ -9,7 +9,7 @@ export const BackButton = styled.button`
   margin: ${({ theme }) => theme.spacing.xl} auto;
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.xl};
   background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.text.primary};
+  color: #ffffff;
   border: none;
   border-radius: ${({ theme }) => theme.borderRadius.md};
   font-size: ${({ theme }) => theme.fontSizes.md};
@@ -94,7 +94,7 @@ export const DetailsSection = styled.div`
 export const Title = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.xxxl};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-  color: ${({ theme }) => theme.colors.text.primary};
+  color: #ffffff;
   margin: 0;
   
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -104,7 +104,7 @@ export const Title = styled.h1`
 
 export const Tagline = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.lg};
-  color: ${({ theme }) => theme.colors.text.secondary};
+  color: #e5e5e5;
   font-style: italic;
   margin: 0;
 `;
@@ -121,7 +121,7 @@ export const MetaItem = styled.div`
   align-items: center;
   gap: ${({ theme }) => theme.spacing.xs};
   font-size: ${({ theme }) => theme.fontSizes.md};
-  color: ${({ theme }) => theme.colors.text.secondary};
+  color: #e5e5e5;
 `;
 
 export const Rating = styled.div`
@@ -136,7 +136,7 @@ export const Rating = styled.div`
 export const Overview = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.md};
   line-height: 1.8;
-  color: ${({ theme }) => theme.colors.text.primary};
+  color: #ffffff;
   margin: 0;
 `;
 
@@ -147,7 +147,7 @@ export const Section = styled.div`
 export const SectionTitle = styled.h2`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
-  color: ${({ theme }) => theme.colors.text.primary};
+  color: #ffffff;
   margin-bottom: ${({ theme }) => theme.spacing.md};
 `;
 
@@ -160,7 +160,7 @@ export const GenreList = styled.div`
 export const GenreBadge = styled.span`
   padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
   background-color: ${({ theme }) => theme.colors.darkGray};
-  color: ${({ theme }) => theme.colors.text.primary};
+  color: #ffffff;
   border-radius: ${({ theme }) => theme.borderRadius.xl};
   font-size: ${({ theme }) => theme.fontSizes.sm};
   border: 1px solid ${({ theme }) => theme.colors.gray};
@@ -181,12 +181,12 @@ export const InfoItem = styled.div`
 
 export const InfoLabel = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.sm};
-  color: ${({ theme }) => theme.colors.text.secondary};
+  color: #e5e5e5;
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `;
 
 export const InfoValue = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.md};
-  color: ${({ theme }) => theme.colors.text.primary};
+  color: #ffffff;
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
 `;
